@@ -1,0 +1,354 @@
+*{
+    margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+a {
+	text-decoration: none;
+}
+
+li {
+	list-style: none;
+}
+
+:root {
+	--poppins: 'Poppins', sans-serif;
+	--lato: 'Lato', sans-serif;
+
+	--light: #F9F9F9;
+	--violet: #8d437f;
+	--light-blue: #cebcca;
+	--grey: #eee;
+	--dark-grey: #AAAAAA;
+	--dark: #342E37;
+	--red: #DB504A;
+	--yellow: #FFCE26;
+	--light-yellow: #FFF2C6;
+	--orange: #FD7238;
+	--light-orange: #FFE0D3;
+}
+
+html {
+	overflow-x: hidden;
+}
+
+body.dark {
+	--light: #0C0C1E;
+	--grey: #060714;
+	--dark: #FBFBFB;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background: var(--grey);
+	overflow-x: hidden;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    background-color: #8d437f;
+    padding: 0 20px;
+}
+
+.navbar-logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 50px;
+    width: auto;
+    margin-right: 10px;
+}
+
+.navbar-title {
+    color: white;
+}
+
+.navbar-profile {
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+#staffName {
+    margin-right: 10px;
+}
+
+h1{
+	padding: 20px 20px;
+	width: 100%;
+}
+
+.logout-button {
+    color: #8d437f;
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+    background-color: #dfd0dc;
+}
+
+.action-buttons {
+    margin-bottom: 20px;
+}
+
+.action-btn {
+    margin-right: 10px;
+    padding: 10px 15px;
+    background-color: #8d437f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.reservation-section {
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #8d437f;
+    color: white;
+}
+
+.reservation-form {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.reservation-form label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+.reservation-form input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+#calendar-icon {
+	cursor: pointer;
+}
+
+
+#content main .box-info {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+	grid-gap: 24px;
+	margin-top: 36px;
+}
+
+#content main .box-info li {
+	padding: 24px;
+	background: var(--light);
+	border-radius: 20px;
+	display: flex;
+	align-items: center;
+	grid-gap: 24px;
+}
+
+#content main .box-info li .bx {
+	width: 100px;
+	height: 80px;
+	border-radius: 10px;
+	font-size: 36px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#content main .box-info li:nth-child(1) .bx {
+	background: var(--light-blue);
+	color: var(--blue);
+}
+
+#content main .box-info li:nth-child(2) .bx {
+	background: var(--light-yellow);
+	color: var(--yellow);
+}
+
+#content main .box-info li:nth-child(3) .bx {
+	background: var(--light-orange);
+	color: var(--orange);
+}
+
+#content main .box-info li .text h3 {
+	font-size: 24px;
+	font-weight: 600;
+	color: var(--dark);
+}
+
+#content main .box-info li .text p {
+	color: var(--dark);
+}
+
+/* Container styling for the table */
+#content main .table-data {
+	display: flex;
+	flex-wrap: wrap;
+	grid-gap: 32px;
+	margin-top: 24px;
+	width: 100%;
+	color: var(--dark);
+}
+
+/* Styling for individual divs within table-data */
+#content main .table-data>div {
+	border-radius: 20px;
+	background: var(--light);
+	padding: 24px;
+	overflow-x: auto;
+
+}
+
+/* Styling for the table header section */
+#content main .table-data .head {
+	display: flex;
+	align-items: center;
+	grid-gap: 16px;
+	margin-bottom: 24px;
+}
+
+/* Styling for the header title */
+#content main .table-data .head h3 {
+	margin-right: auto;
+	font-size: 24px;
+	font-weight: 600;
+}
+
+/* Styling for icons in the header */
+#content main .table-data .head .bx {
+	cursor: pointer;
+}
+
+/* Styling for the order section containing the table */
+#content main .table-data .order {
+	flex-grow: 1;
+	flex-basis: 500px;
+}
+
+/* General table styling */
+#content main .table-data .order table {
+	width: 100%;
+	border-collapse: collapse;
+	border-spacing: 0;
+	table-layout: fixed;
+
+}
+
+/* Styling for table headers */
+#content main .table-data .order table th {
+	color: var(--light);
+	padding: 12px 15px;
+	font-size: 14px;
+	text-align: left;
+	border-bottom: 2px solid var(--grey);
+	background-color: var(--violet);
+	border-right: 1px solid var(--grey);
+
+}
+
+#content main .table-data .order table th:last-child {
+	border-right: none;
+
+}
+
+/* Styling for table body cells */
+#content main .table-data .order table td {
+	padding: 12px 15px;
+	border-bottom: 1px solid var(--light-grey);
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	color: var(--dark);
+	text-align: center;
+	border-right: 1px solid var(--grey);
+}
+
+#content main .table-data .order table td:last-child {
+	border-right: none;
+
+}
+
+/* Alternating row background for better readability */
+#content main .table-data .order table tbody tr:nth-child(even) {
+	background-color: #c0bbbf;
+
+}
+
+/* pagination */
+
+.pagination {
+	position: fixed;
+    bottom: 20px;
+    right: 20px;
+    text-align: center;
+    z-index: 1000;
+}
+
+.pagination-link {
+    display: inline-block;
+    padding: 4px 10px;
+    margin: 0 4px;
+    border: 1px solid #ccc;
+    background-color: #AAAAAA;
+    color: #333;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.pagination-link.active {
+    background-color: #8d437f;
+    color: #fff;
+    border-color: #8d437f;
+}
+
+.pagination-link:hover {
+    background-color: #e9ecef;
+    border-color: #adb5bd;
+}
+
+
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #f1f1f1;
+}
